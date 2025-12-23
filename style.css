@@ -307,100 +307,78 @@ s .header-menu-items:hover {
 
 .main-wrapper {
     max-width: 1050px;
-    margin: 80px auto;
+    margin: 60px auto;
     padding: 0 20px;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-header h2 {
-    font-size: 42px;
-    font-weight: 800;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
 }
 
 .product-card {
     background-color: #ffffff;
-    border-radius: 50px;
-    margin-bottom: 30px;
+    border-radius: 40px;
+    margin-bottom: 40px;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    min-height: 450px;
+    min-height: 420px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
     overflow: hidden;
 }
 
+.product-card--reverse {
+    flex-direction: row-reverse;
+}
+
 .info-column {
-    flex: 0 0 55%;
-    padding: 40px 80px;
+    flex: 1;
+    padding: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-sizing: border-box;
 }
 
 .visual-column {
-    flex: 0 0 45%;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
+    padding: 40px;
+    background-color: #ffffff;
 }
 
-/* Títulos de las tarjetas */
+.product-image {
+    max-width: 85%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Estilos de texto */
 .info-column h3 {
     font-size: 34px;
-    font-weight: 700;
-    margin: 0 0 20px 0;
+    font-weight: 800;
+    margin-bottom: 20px;
     color: #000;
-    line-height: 1.1;
 }
 
 .info-column p {
     font-size: 18px;
     color: #444;
     line-height: 1.5;
-    margin-bottom: 35px;
-    max-width: 400px;
+    margin-bottom: 30px;
 }
 
-.product-image {
-    max-width: 85%;
-    height: auto;
-    display: block;
-}
-
-.product-card {
-    flex-direction: row-reverse;
-}
-
-.product-card__mirror-layout  {
-    flex-direction: row-reverse;
-}
-
-/* Botón */
 .btn-purple {
     background-color: #622ad2;
     color: #fff;
     border: none;
-    padding: 16px 45px;
+    padding: 16px 40px;
     border-radius: 100px;
     font-weight: 700;
-    font-size: 15px;
     cursor: pointer;
     width: fit-content;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .btn-purple:hover {
     background-color: #4e1fa8;
-    transform: scale(1.02);
+    transform: translateY(-2px);
 }
 
 /* ===== FOOTER ===== */
@@ -413,7 +391,6 @@ s .header-menu-items:hover {
     font-family: 'Arial', sans-serif;
 }
 
-/* Contenedor principal */
 .footer-container {
     max-width: 1022px;
     margin: 0px auto;
@@ -507,59 +484,60 @@ s .header-menu-items:hover {
 }
 
 /* SECTION BENEFICIOS */
-    @media (max-width: 768px) {
-        .banner {
-            flex-direction: column;
-            text-align: center;
-            height: auto;
-        }
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
 
-        .banner-info {
-            flex-direction: center;
-            gap: 16px;
-        }
+    .banner-info {
+        flex-direction: center;
+        gap: 16px;
+    }
 
-        .btn-white {
-            align-self: center;
-        }
+    .btn-white {
+        align-self: center;
+    }
 
-        .banner-info p {
-            padding-bottom: 16px;
-        }
+    .banner-info p {
+        padding-bottom: 16px;
+    }
 
-        .main-title, .section-header h2 {
-            font-size: 24px;
-        }
+    .main-title,
+    .section-header h2 {
+        font-size: 24px;
+    }
 
-        .card{
-            font-size: 20px;
-            flex-direction: column;
-        }
-        
-        /* SECTION COBROS */
-        .product-card {
-            flex-direction: column-reverse;
-        }
+    .card {
+        font-size: 20px;
+        flex-direction: column;
+    }
 
-         /* SECTION FOOTER */
-        .footer-site {
-            padding: 35px 18px;
-        }
+    /* SECTION COBROS */
+    .product-card {
+        flex-direction: column-reverse;
+    }
 
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 32px 24px;
-        }
-        
-        .footer__column-lists {
-            gap: 13px;
-        }
+    /* SECTION FOOTER */
+    .footer-site {
+        padding: 35px 18px;
+    }
 
-        .footer__logo-container {
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 24px;
+    }
+
+    .footer__column-lists {
+        gap: 13px;
+    }
+
+    .footer__logo-container {
         display: block;
         position: relative;
         left: 100%;
         transform: translate(-30%, -30%);
-        }
     }
+}
