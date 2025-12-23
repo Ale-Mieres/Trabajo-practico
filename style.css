@@ -14,7 +14,8 @@ body {
     background-color: var(--background-color);
 }
 
-ul,ol {
+ul,
+ol {
     list-style: none;
 }
 
@@ -42,7 +43,7 @@ ul,ol {
     display: none;
     font-size: 32px;
     font-weight: bolder;
-    margin:0px 16px;
+    margin: 0px 16px;
     justify-self: left;
     position: absolute;
     left: 16px;
@@ -188,7 +189,7 @@ s .header-menu-items:hover {
 
 /* ===== SECCIÓN DE BENEFICIOS ===== */
 
-.section-wrapper { 
+.section-wrapper {
     max-width: 1100px;
     margin: 60px auto;
     padding: 0 20px;
@@ -375,15 +376,15 @@ s .header-menu-items:hover {
     display: block;
 }
 
-.product-card.mirror-layout {
+.product-card {
     flex-direction: row-reverse;
 }
 
-.product-card.mirror-layout .info-column {
-    padding: 40px 80px;
+.product-card__mirror-layout  {
+    flex-direction: row-reverse;
 }
 
-/* Botón idéntico */
+/* Botón */
 .btn-purple {
     background-color: #622ad2;
     color: #fff;
@@ -470,25 +471,18 @@ s .header-menu-items:hover {
     text-decoration: underline;
 }
 
+/* MEDIA QUERIES */
 
+@media (max-width: 1000px) {
 
-
-@media (max-width: 992px) {
-    :root {
-        --img-height: auto; 
-    }
-
-   /*  .header {
-        display: none;
-    } */
-
+    /* SECTION HEADER */
     .header-mobile {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         height: 40px;
         width: 100%;
-}
+    }
 
     .mobile__logo-nave {
         display: flex;
@@ -510,21 +504,62 @@ s .header-menu-items:hover {
     .divider {
         display: none;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+/* SECTION BENEFICIOS */
+    @media (max-width: 768px) {
+        .banner {
+            flex-direction: column;
+            text-align: center;
+            height: auto;
+        }
+
+        .banner-info {
+            flex-direction: center;
+            gap: 16px;
+        }
+
+        .btn-white {
+            align-self: center;
+        }
+
+        .banner-info p {
+            padding-bottom: 16px;
+        }
+
+        .main-title, .section-header h2 {
+            font-size: 24px;
+        }
+
+        .card{
+            font-size: 20px;
+            flex-direction: column;
+        }
+        
+        /* SECTION COBROS */
+        .product-card {
+            flex-direction: column-reverse;
+        }
+
+         /* SECTION FOOTER */
+        .footer-site {
+            padding: 35px 18px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px 24px;
+        }
+        
+        .footer__column-lists {
+            gap: 13px;
+        }
+
+        .footer__logo-container {
+        display: block;
+        position: relative;
+        left: 100%;
+        transform: translate(-30%, -30%);
+        }
+    }
